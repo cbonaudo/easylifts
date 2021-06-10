@@ -1,13 +1,11 @@
 <template>
-  <Exercise v-if="isTrainingSelected" />
-  <TrainingSelection v-else />
+  <router-link to="/training-selection">Selection</router-link>
+  <router-view></router-view>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useStore } from "vuex";
-import Exercise from "./components/Exercise/Exercise.vue";
-import TrainingSelection from "./components/TrainingSelection/TrainingSelection.vue";
 
 const store = useStore();
 const isTrainingSelected = computed(() => store.getters.isTrainingSelected);

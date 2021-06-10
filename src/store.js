@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import { exercises } from "./data.json";
+import { trainings } from "./data.json";
 
 export const store = createStore({
   state() {
@@ -12,10 +12,12 @@ export const store = createStore({
   },
   mutations: {
     endSet(state) {
+      if (state.currentExo === null) return;
+
       if (state.currentExo.currentSet < state.currentExo.sets) {
         state.currentExo.currentSet++;
       } else {
-        const nextExercise = exercises[state.currentTraining].find(
+        const nextExercise = trainings[state.currentTraining].find(
           (exo) => exo.id === state.currentExo.id + 1
         );
         if (nextExercise == undefined) {
@@ -31,10 +33,10 @@ export const store = createStore({
     skipRest(state) {
       state.restingTime = 0;
     },
-    setExercise(state, exercise) {
+    setTraining(state, training) {
       state.restingTime = 0;
-      state.currentTraining = exercise;
-      state.currentExo = exercises[exercise][0];
+      state.currentTraining = training;
+      state.currentExo = trainings[training][0];
       state.currentExo.currentSet = 1;
     },
     toggleBackDisabled(state) {
@@ -53,8 +55,8 @@ export const store = createStore({
     isTrainingSelected(state) {
       return !!state.currentTraining;
     },
-    exerciseList(state) {
-      return Object.keys(exercises);
+    trainingList(state) {
+      return Object.keys(trainings);
     },
   },
 });

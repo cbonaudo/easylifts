@@ -1,5 +1,5 @@
 {
-  "exercises": {
+  "trainings": {
     "push": [
       {
         "id": 1,
@@ -35,7 +35,7 @@
       },
       {
         "id": 5,
-        "name": "overhead triceps extensions",
+        "name": "Overhead triceps extensions",
         "disabledName": "",
         "sets": 3,
         "currentSet": 1,

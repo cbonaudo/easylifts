@@ -5,21 +5,31 @@
   <button @click="skipRest" v-if="isResting">Skip rest</button>
 
   <div v-if="isResting">Up next :</div>
-  <Exo-Infos class="exo-infos" />
+  <Exo-Infos v-if="currentExo" class="exo-infos" />
+
   <button @click="endSet" v-if="!isResting">Done</button>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useStore } from "vuex";
-import RestTime from "./RestTime.vue";
-import ExoInfos from "./ExoInfos.vue";
+import { useRouter } from "vue-router";
+import RestTime from "./components/RestTime.vue";
+import ExoInfos from "./components/ExoInfos.vue";
 
 const store = useStore();
+const router = useRouter();
 
-const endSet = () => store.commit("endSet");
+const endSet = () => {
+  if (store.state.currentExo === null) {
+    router.push({ name: "training-selection" });
+  } else {
+    store.commit("endSet");
+  }
+};
 const skipRest = () => store.commit("skipRest");
 const isResting = computed(() => store.getters.isResting);
+const currentExo = computed(() => store.state.currentExo);
 </script>
 
 <style lang="scss" scoped>
