@@ -4,11 +4,9 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
-const isTrainingSelected = computed(() => store.getters.isTrainingSelected);
 
 store.commit("runTimeLoop");
 </script>

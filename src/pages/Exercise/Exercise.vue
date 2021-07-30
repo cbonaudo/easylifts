@@ -1,5 +1,6 @@
 <template>
   <h1>Training</h1>
+  <p>------</p>
 
   <RestTime v-if="isResting" class="rest-time" />
   <button @click="skipRest" v-if="isResting">Skip rest</button>
@@ -7,7 +8,7 @@
   <div v-if="isResting">Up next :</div>
   <Exo-Infos v-if="currentExo" class="exo-infos" />
 
-  <button @click="endSet" v-if="!isResting">Done</button>
+  <button @click="endSet" v-if="!isResting" class="done-btn">Done</button>
 </template>
 
 <script setup>
@@ -27,6 +28,7 @@ const endSet = () => {
     store.commit("endSet");
   }
 };
+
 const skipRest = () => store.commit("skipRest");
 const isResting = computed(() => store.getters.isResting);
 const currentExo = computed(() => store.state.currentExo);
@@ -35,5 +37,11 @@ const currentExo = computed(() => store.state.currentExo);
 <style lang="scss" scoped>
 .exo-infos {
   margin-top: 10px;
+}
+.done-btn {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  width: 160px;
+  height: 60px;
 }
 </style>

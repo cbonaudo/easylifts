@@ -83,7 +83,7 @@
         "currentSet": 1,
         "reps": "8-12"
       }
-    ], 
+    ],
     "legs": [
       {
         "id": 1,
@@ -122,6 +122,15 @@
         "name": "Calf raises",
         "disabledName": "",
         "sets": 3,
+        "currentSet": 1,
+        "reps": "AMRAP"
+      }
+    ],
+    "abs": [
+      {
+        "id": 1,
+        "name": "Abs wheel / V-sit / Leg raises",
+        "sets": 4,
         "currentSet": 1,
         "reps": "AMRAP"
       }

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div>
+    <h2>
       {{
         backDisabled
           ? currentExo.disabledName || currentExo.name
           : currentExo.name
       }}
-    </div>
+    </h2>
     <div>Set {{ currentExo.currentSet }} of {{ currentExo.sets }}</div>
     <div>{{ currentExo.reps }} reps</div>
   </div>
