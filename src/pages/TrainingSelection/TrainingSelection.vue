@@ -1,15 +1,14 @@
 <template>
-  <h1>Training Selection</h1>
+  <h1>Choose Your Training</h1>
+
   <div class="trainings">
-    <div v-for="training in trainingList" :key="training" class="training">
-      <button @click="() => setTraining(training)">
-        {{ training }}
-      </button>
-      <router-link :to="{ name: 'training-details', params: { id: training } }"
-        >Details</router-link
-      >
-    </div>
+    <Card
+      v-for="training in trainingList"
+      :key="training"
+      :training="training"
+    />
   </div>
+
   <div class="back-container">
     <input
       type="checkbox"
@@ -24,17 +23,12 @@
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+import Card from "./components/Card.vue";
 
 const store = useStore();
 const router = useRouter();
 
-const trainingList = computed(() => store.getters.trainingList);
-const setTraining = (training) => {
-  store.commit("setTraining", training);
-  router.push({
-    name: "exercise",
-  });
-};
+const trainingList = computed(() => store.state.trainingList);
 
 const backDisabled = computed(() => store.state.backDisabled);
 const toggleBackDisabled = () => store.commit("toggleBackDisabled");
@@ -43,6 +37,7 @@ const toggleBackDisabled = () => store.commit("toggleBackDisabled");
 <style lang="scss" scoped>
 .trainings {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .training {

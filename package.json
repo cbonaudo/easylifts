@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir docs",
     "serve": "vite preview"
   },
   "dependencies": {
