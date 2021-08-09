@@ -24,8 +24,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  height: 350px;
+  height: 80vh;
   margin: auto;
+}
+
+body {
+  margin: 0px;
 }
 
 button {
