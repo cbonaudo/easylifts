@@ -3,7 +3,11 @@
   <h2>{{ route.params.id }}</h2>
 
   <div class="exercises">
-    <div v-for="exercise in training" :key="exercise" class="exercise">
+    <div
+      v-for="exercise in training.exercises"
+      :key="exercise.id"
+      class="exercise"
+    >
       <h3>{{ exercise.name }}</h3>
       <p v-if="exercise.disabledName">
         {{ "Disabled alternative: " + exercise.disabledName }}
@@ -17,11 +21,15 @@
 
 <script setup>
 import { useRoute } from "vue-router";
-import { trainings } from "../../data.json";
+import { computed } from "vue";
+import { useStore } from "vuex";
 
+const store = useStore();
 const route = useRoute();
 
-const training = trainings[route.params.id];
+const training = computed(() =>
+  store.state.trainings.find((training) => training.id === route.params.id)
+);
 </script>
 
 <style lang="scss" scoped>

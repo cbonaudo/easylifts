@@ -8,6 +8,7 @@ export const store = createStore({
       currentExo: null,
       restingTime: 0,
       backDisabled: false,
+      trainings: trainings,
       // TODO: remove when we change the json
       trainingList: [
         {
@@ -60,10 +61,14 @@ export const store = createStore({
     skipRest(state) {
       state.restingTime = 0;
     },
-    setTraining(state, training) {
+    setTraining(state, trainingId) {
+      const training = state.trainings.find(
+        (training) => training.id === trainingId
+      );
+
       state.restingTime = 0;
       state.currentTraining = training;
-      state.currentExo = trainings[training][0];
+      state.currentExo = training.exercises[0];
       state.currentExo.currentSet = 1;
     },
     toggleBackDisabled(state) {

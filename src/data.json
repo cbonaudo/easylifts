@@ -1,139 +1,163 @@
 {
-  "trainings": {
-    "push": [
-      {
-        "id": 1,
-        "name": "Bench press / Military press",
-        "disabledName": "",
-        "sets": 4,
-        "currentSet": 1,
-        "reps": "5"
-      },
-      {
-        "id": 2,
-        "name": "Military press / Bench press",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 3,
-        "name": "Incline dumbbell press",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 4,
-        "name": "Triceps pushdowns",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 5,
-        "name": "Overhead triceps extensions",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      }
-    ],
-    "pull": [
-      {
-        "id": 1,
-        "name": "Deadlift / Barbell rows",
-        "disabledName": "Pullups",
-        "sets": 4,
-        "currentSet": 1,
-        "reps": "5"
-      },
-      {
-        "id": 2,
-        "name": "Pull Ups",
-        "disabledName": "Chest supported rows",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 3,
-        "name": "Cable rows",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 4,
-        "name": "Face pulls",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "15-20"
-      },
-      {
-        "id": 5,
-        "name": "Curls",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      }
-    ],
-    "legs": [
-      {
-        "id": 1,
-        "name": "Squat",
-        "disabledName": "Bulgarian Split Squats",
-        "sets": 4,
-        "currentSet": 1,
-        "reps": "5"
-      },
-      {
-        "id": 2,
-        "name": "Romanian Deadlift",
-        "disabledName": "Lunges",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 3,
-        "name": "Leg press",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 4,
-        "name": "Leg curls",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "8-12"
-      },
-      {
-        "id": 5,
-        "name": "Calf raises",
-        "disabledName": "",
-        "sets": 3,
-        "currentSet": 1,
-        "reps": "AMRAP"
-      }
-    ],
-    "abs": [
-      {
-        "id": 1,
-        "name": "Abs wheel / V-sit / Leg raises",
-        "sets": 4,
-        "currentSet": 1,
-        "reps": "AMRAP"
-      }
-    ]
-  }
+  "trainings": [
+    {
+      "id": "push",
+      "name": "push",
+      "photo_url": "https://rabire.com",
+      "category": "PUSH",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Bench press / Military press",
+          "disabledName": "",
+          "sets": 4,
+          "currentSet": 1,
+          "reps": "5"
+        },
+        {
+          "id": 2,
+          "name": "Military press / Bench press",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 3,
+          "name": "Incline dumbbell press",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 4,
+          "name": "Triceps pushdowns",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 5,
+          "name": "Overhead triceps extensions",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        }
+      ]
+    },
+    {
+      "id": "pull",
+      "name": "pull",
+      "photo_url": "https://rabire.com",
+      "category": "PULL",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Deadlift / Barbell rows",
+          "disabledName": "Pullups",
+          "sets": 4,
+          "currentSet": 1,
+          "reps": "5"
+        },
+        {
+          "id": 2,
+          "name": "Pull Ups",
+          "disabledName": "Chest supported rows",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 3,
+          "name": "Cable rows",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 4,
+          "name": "Face pulls",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "15-20"
+        },
+        {
+          "id": 5,
+          "name": "Curls",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        }
+      ]
+    },
+    {
+      "id": "legs",
+      "name": "legs",
+      "photo_url": "https://rabire.com",
+      "category": "LEGS",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Squat",
+          "disabledName": "Bulgarian Split Squats",
+          "sets": 4,
+          "currentSet": 1,
+          "reps": "5"
+        },
+        {
+          "id": 2,
+          "name": "Romanian Deadlift",
+          "disabledName": "Lunges",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 3,
+          "name": "Leg press",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 4,
+          "name": "Leg curls",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": 5,
+          "name": "Calf raises",
+          "disabledName": "",
+          "sets": 3,
+          "currentSet": 1,
+          "reps": "AMRAP"
+        }
+      ]
+    },
+    {
+      "id": "abs",
+      "name": "abs",
+      "photo_url": "https://rabire.com",
+      "category": "ABS",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Abs wheel / V-sit / Leg raises",
+          "sets": 4,
+          "currentSet": 1,
+          "reps": "AMRAP"
+        }
+      ]
+    }
+  ]
 }
