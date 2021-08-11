@@ -61,11 +61,7 @@ export const store = createStore({
     skipRest(state) {
       state.restingTime = 0;
     },
-    setTraining(state, trainingId) {
-      const training = state.trainings.find(
-        (training) => training.id === trainingId
-      );
-
+    setTraining(state, training) {
       state.restingTime = 0;
       state.currentTraining = training;
       state.currentExo = training.exercises[0];
@@ -78,6 +74,15 @@ export const store = createStore({
       setInterval(function () {
         state.restingTime -= 1;
       }, 1000);
+    },
+  },
+  actions: {
+    getTrainingById({ state, commit }, trainingId) {
+      // TODO: check if training is already loaded, if yes skip
+      commit(
+        "setTraining",
+        state.trainings.find((training) => training.id === trainingId)
+      );
     },
   },
   getters: {

@@ -27,9 +27,9 @@ import { useStore } from "vuex";
 const store = useStore();
 const route = useRoute();
 
-const training = computed(() =>
-  store.state.trainings.find((training) => training.id === route.params.id)
-);
+store.dispatch("getTrainingById", route.params.id);
+
+const training = computed(() => store.state.currentTraining);
 </script>
 
 <style lang="scss" scoped>

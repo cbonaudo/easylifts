@@ -15,11 +15,13 @@
 import { computed } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import RestTime from "./components/RestTime.vue";
 import ExoInfos from "./components/ExoInfos.vue";
 
-const store = useStore();
+const route = useRoute();
 const router = useRouter();
+const store = useStore();
 
 const endSet = () => {
   if (store.state.currentExo === null) {
@@ -28,6 +30,8 @@ const endSet = () => {
     store.commit("endSet");
   }
 };
+
+store.dispatch("getTrainingById", route.params.id);
 
 const skipRest = () => store.commit("skipRest");
 const isResting = computed(() => store.getters.isResting);

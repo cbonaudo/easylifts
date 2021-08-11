@@ -14,5 +14,5 @@ export const routes = [
     name: "training-selection",
     component: TrainingSelection,
   },
-  { path: "/exercise", name: "exercise", component: Exercise },
+  { path: "/exercise/:id", name: "exercise", component: Exercise },
 ];
