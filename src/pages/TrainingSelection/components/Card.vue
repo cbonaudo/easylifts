@@ -28,9 +28,6 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["setTraining"]),
-    ...mapActions(["getTrainingById"]),
-
     goToTraining() {
       this.$router.push({
         name: "exercise",
