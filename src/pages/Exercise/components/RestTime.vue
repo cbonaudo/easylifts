@@ -12,7 +12,16 @@ import { useStore } from "vuex";
 const store = useStore();
 
 const restingTime = computed(() => store.state.restingTime);
-const barWidth = computed(() => 100 - (store.state.restingTime / 90) * 100);
+
+const barWidth = computed(() => {
+  let currentRestTime = 0;
+  if (store.state.currentSet === 1) {
+    currentRestTime = store.state.currentTraining.rest_between_exercices;
+  } else {
+    currentRestTime = store.state.currentTraining.rest_between_sets;
+  }
+  return 100 - (store.state.restingTime / currentRestTime) * 100;
+});
 </script>
 
 <style lang="scss" scoped>

@@ -3,50 +3,52 @@
     {
       "id": "push",
       "name": "push",
-      "photo_url": "https://rabire.com",
+      "photo_url": "./assets/push.png",
       "category": "PUSH",
       "exercises": [
         {
-          "id": 1,
+          "id": "bench_press_military_press",
           "name": "Bench press / Military press",
           "disabledName": "",
           "sets": 4,
-          "currentSet": 1,
+          "position": 1,
           "reps": "5"
         },
         {
-          "id": 2,
+          "id": "military_press_bench_press",
           "name": "Military press / Bench press",
           "disabledName": "",
           "sets": 3,
-          "currentSet": 1,
+          "position": 2,
           "reps": "8-12"
         },
         {
-          "id": 3,
+          "id": "incline_dulbbell",
           "name": "Incline dumbbell press",
           "disabledName": "",
           "sets": 3,
-          "currentSet": 1,
+          "position": 3,
           "reps": "8-12"
         },
         {
-          "id": 4,
+          "id": "tricpeps_pushdowns",
           "name": "Triceps pushdowns",
           "disabledName": "",
           "sets": 3,
-          "currentSet": 1,
+          "position": 4,
           "reps": "8-12"
         },
         {
-          "id": 5,
+          "id": "overhead_triceps",
           "name": "Overhead triceps extensions",
           "disabledName": "",
           "sets": 3,
-          "currentSet": 1,
+          "position": 5,
           "reps": "8-12"
         }
-      ]
+      ],
+      "rest_between_sets": 90,
+      "rest_between_exercices": 120
     },
     {
       "id": "pull",
@@ -55,46 +57,48 @@
       "category": "PULL",
       "exercises": [
         {
-          "id": 1,
+          "id": "deadlift_barbell_rows",
           "name": "Deadlift / Barbell rows",
           "disabledName": "Pullups",
+          "position": 1,
           "sets": 4,
-          "currentSet": 1,
           "reps": "5"
         },
         {
-          "id": 2,
+          "id": "pull_ups",
           "name": "Pull Ups",
           "disabledName": "Chest supported rows",
+          "position": 2,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         },
         {
-          "id": 3,
+          "id": "cable_rows",
           "name": "Cable rows",
           "disabledName": "",
+          "position": 3,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         },
         {
-          "id": 4,
+          "id": "face_pulls",
           "name": "Face pulls",
           "disabledName": "",
+          "position": 4,
           "sets": 3,
-          "currentSet": 1,
           "reps": "15-20"
         },
         {
-          "id": 5,
+          "id": "curls",
           "name": "Curls",
           "disabledName": "",
+          "position": 5,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         }
-      ]
+      ],
+      "rest_between_sets": 90,
+      "rest_between_exercices": 120
     },
     {
       "id": "legs",
@@ -103,46 +107,48 @@
       "category": "LEGS",
       "exercises": [
         {
-          "id": 1,
+          "id": "squat",
           "name": "Squat",
           "disabledName": "Bulgarian Split Squats",
+          "position": 1,
           "sets": 4,
-          "currentSet": 1,
           "reps": "5"
         },
         {
-          "id": 2,
+          "id": "romanian_deadlift",
           "name": "Romanian Deadlift",
           "disabledName": "Lunges",
+          "position": 2,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         },
         {
-          "id": 3,
+          "id": "leg_press",
           "name": "Leg press",
           "disabledName": "",
+          "position": 3,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         },
         {
-          "id": 4,
+          "id": "leg_curls",
           "name": "Leg curls",
           "disabledName": "",
+          "position": 4,
           "sets": 3,
-          "currentSet": 1,
           "reps": "8-12"
         },
         {
-          "id": 5,
+          "id": "calf_raises",
           "name": "Calf raises",
           "disabledName": "",
+          "position": 5,
           "sets": 3,
-          "currentSet": 1,
           "reps": "AMRAP"
         }
-      ]
+      ],
+      "rest_between_sets": 90,
+      "rest_between_exercices": 120
     },
     {
       "id": "abs",
@@ -151,13 +157,15 @@
       "category": "ABS",
       "exercises": [
         {
-          "id": 1,
+          "id": "abs_wheel_v_sit_leg_raises",
           "name": "Abs wheel / V-sit / Leg raises",
+          "position": 1,
           "sets": 4,
-          "currentSet": 1,
           "reps": "AMRAP"
         }
-      ]
+      ],
+      "rest_between_sets": 90,
+      "rest_between_exercices": 120
     }
   ]
 }

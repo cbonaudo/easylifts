@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions, mapMutations } from "vuex";
 
 export default {
   props: {
@@ -26,15 +26,15 @@ export default {
       },
     },
   },
-  methods: {
-    ...mapMutations(["setTraining"]),
 
+  methods: {
     goToTraining() {
-      this.setTraining(this.training.id);
       this.$router.push({
         name: "exercise",
+        params: { id: this.training.id },
       });
     },
+
     goToDetails() {
       this.$router.push({
         name: "training-details",
