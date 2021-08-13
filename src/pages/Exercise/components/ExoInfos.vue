@@ -7,7 +7,7 @@
           : currentExo.name
       }}
     </h2>
-    <div>Set {{ currentExo.currentSet }} of {{ currentExo.sets }}</div>
+    <div>Set {{ currentSet }} of {{ currentExo.sets }}</div>
     <div>{{ currentExo.reps }} reps</div>
   </div>
 </template>
@@ -18,6 +18,7 @@ import { useStore } from "vuex";
 
 const store = useStore();
 
+const currentSet = computed(() => store.state.currentSet);
 const currentExo = computed(() => store.state.currentExo);
 const backDisabled = computed(() => store.state.backDisabled);
 </script>
