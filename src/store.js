@@ -85,16 +85,19 @@ export const store = createStore({
         state.trainings.find((training) => training.id === trainingId)
       );
     },
+    saveCurrentWeight({ state }, weight) {
+      localStorage.setItem(`el-weight-${state.currentExo.id}`, weight);
+    },
   },
   getters: {
-    isNextExercise(state) {
-      return;
-    },
     isResting(state) {
       return state.restingTime > 0;
     },
     isTrainingSelected(state) {
       return !!state.currentTraining;
+    },
+    getLastWeight(state) {
+      return localStorage.getItem(`el-weight-${state.currentExo.id}`);
     },
   },
 });
