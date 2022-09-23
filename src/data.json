@@ -1,6 +1,56 @@
 {
   "trainings": [
     {
+      "id": "fullbody",
+      "name": "fullbody",
+      "photo_url": "./assets/abs.png",
+      "category": "FULL",
+      "exercises": [
+        {
+          "id": "bench_press",
+          "name": "Bench press",
+          "disabledName": "",
+          "sets": 4,
+          "position": 1,
+          "reps": "8-12"
+        },
+        {
+          "id": "back_squat",
+          "name": "Back Squat",
+          "disabledName": "",
+          "sets": 4,
+          "position": 2,
+          "reps": "8-12"
+        },
+        {
+          "id": "overhead_press",
+          "name": "Overhead Press",
+          "disabledName": "",
+          "sets": 4,
+          "position": 3,
+          "reps": "10-15"
+        },
+        {
+          "id": "deadlift",
+          "name": "Deadlift",
+          "disabledName": "",
+          "sets": 4,
+          "position": 4,
+          "reps": "10-15"
+        },
+        {
+          "id": "v_crunch",
+          "name": "V Crunch / Leg Raises",
+          "disabledName": "",
+          "sets": 4,
+          "position": 5,
+          "reps": "20"
+        }
+      ],
+      "rest_between_sets": 120,
+      "rest_between_exercices": 150
+    },
+    {
       "id": "push",
       "name": "push",
       "photo_url": "./assets/push.png",

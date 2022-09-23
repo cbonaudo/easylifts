@@ -15,6 +15,11 @@ export const store = createStore({
       // TODO: remove when we change the json
       trainingList: [
         {
+          id: "fullbody",
+          name: "fullbody",
+          pictureUrl: abs,
+        },
+        {
           id: "push",
           name: "push",
           pictureUrl: push,
