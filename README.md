@@ -1,5 +1,9 @@
 # Easylifts
 
+Est hébergé ici : 
+https://cbonaudo.github.io/easylifts/
+
+
 ## Setup
 
 You must have node 14+.
